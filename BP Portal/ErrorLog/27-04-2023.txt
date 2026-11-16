@@ -1,0 +1,12 @@
+4/27/2023 12:39:53 AM : The Error is : System.ArgumentException: Column 'U_Gender' does not belong to table Table.
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.responseData(String Type, String Query2) in D:\ARGIT\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 726
+   at DemoProject.Models.BusinessLayer.BusinessLogic.ItemList() in D:\ARGIT\BP Portal\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 1415
+--------------------------------------------------------
+4/27/2023 12:43:01 AM : The Error is : System.ArgumentException: Column 'U_Gender' does not belong to table Table.
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.responseData(String Type, String Query2) in D:\ARGIT\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 726
+   at DemoProject.Models.BusinessLayer.BusinessLogic.ItemList() in D:\ARGIT\BP Portal\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 1415
+--------------------------------------------------------

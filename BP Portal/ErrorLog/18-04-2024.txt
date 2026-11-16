@@ -1,0 +1,52 @@
+4/18/2024 10:17:14 AM : 
+--------------------------------------------------------
+4/18/2024 10:23:31 AM : Road/Air Shipment Screen Updated Successfully, DocNum: 1
+--------------------------------------------------------
+4/18/2024 10:23:31 AM : Road/Air Shimpment Updated Successfully, DocNum: Update Success
+--------------------------------------------------------
+4/18/2024 10:26:25 AM : Road/Air Shipment Screen Updated Successfully, DocNum: 1
+--------------------------------------------------------
+4/18/2024 10:26:25 AM : Road/Air Shimpment Updated Successfully, Status: Update Success
+--------------------------------------------------------
+4/18/2024 10:59:09 AM : 
+--------------------------------------------------------
+4/18/2024 10:59:44 AM : The Error is : 1). [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;339 invalid number: Failed to parse constant 
+
+--------------------------------------------------------
+4/18/2024 10:59:44 AM : Road/Air Shimpment Update Failed, Error: Update Failed: 1). [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;339 invalid number: Failed to parse constant 
+
+--------------------------------------------------------
+4/18/2024 11:01:24 AM : Road/Air Shipment Screen Updated Successfully, DocNum: 5
+--------------------------------------------------------
+4/18/2024 11:01:24 AM : Road/Air Shimpment Updated Successfully, Status: Update Success
+--------------------------------------------------------
+4/18/2024 11:54:32 AM : Sea Shipment Screen Added Successfully, DocNum: 
+--------------------------------------------------------
+4/18/2024 11:54:32 AM : DemoProject.Models.DomainClasses.ImportAddonErrorDetails
+--------------------------------------------------------
+4/18/2024 11:57:57 AM : Sea Shipment Screen Added Successfully, DocNum: 
+--------------------------------------------------------
+4/18/2024 11:57:57 AM : DemoProject.Models.DomainClasses.ImportAddonErrorDetails
+--------------------------------------------------------
+4/18/2024 11:59:01 AM : Sea Shipment Screen Added Successfully, DocNum: 13
+--------------------------------------------------------
+4/18/2024 11:59:01 AM : DemoProject.Models.DomainClasses.ImportAddonErrorDetails
+--------------------------------------------------------
+4/18/2024 12:15:29 PM : Sea Shipment Updated Successfully, DocNum: 13
+--------------------------------------------------------
+4/18/2024 12:15:29 PM : DemoProject.Models.DomainClasses.ImportAddonErrorDetails
+--------------------------------------------------------
+4/18/2024 12:16:17 PM : The Error is : Illegal value entered
+--------------------------------------------------------
+4/18/2024 12:17:56 PM : The Error is : Illegal value entered
+--------------------------------------------------------
+4/18/2024 12:26:40 PM : The Error is : Illegal value entered
+--------------------------------------------------------
+4/18/2024 12:27:54 PM : The Error is : Input string was not in a correct format.
+--------------------------------------------------------
+4/18/2024 12:27:59 PM : The Error is : Input string was not in a correct format.
+--------------------------------------------------------
+4/18/2024 12:30:54 PM : Sea Shipment Updated Successfully, DocNum: 13
+--------------------------------------------------------
+4/18/2024 12:30:54 PM : DemoProject.Models.DomainClasses.ImportAddonErrorDetails
+--------------------------------------------------------

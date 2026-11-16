@@ -1,0 +1,4 @@
+3/23/2023 12:26:31 PM : The Error is : System.NullReferenceException: Object reference not set to an instance of an object.
+   at DemoProject.Models.BusinessLayer.BusinessLogic.Non_Execute_HANA(String NoExQuery) in C:\GK\GK_BPPortal_API\BP Portal\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 1455
+   at DemoProject.Models.BusinessLayer.BusinessLogic.StockTakePutInhouseStock(StockTakePutInhouseStock model) in C:\GK\GK_BPPortal_API\BP Portal\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 988
+--------------------------------------------------------

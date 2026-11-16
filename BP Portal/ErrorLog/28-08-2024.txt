@@ -1,0 +1,44 @@
+28-08-2024 13:13:12 : The Error is : System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.getARinvoiceList(Body model) in D:\Rajesh\SAPtoMobile\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 944
+--------------------------------------------------------
+28-08-2024 13:13:20 : Query    :    
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'jumra-prod-hana' rc=11001: No such host is known.  (jumra-prod-hana:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in D:\Rajesh\SAPtoMobile\BP Portal\Models\SqlConnection\SqlConnection.cs:line 157
+--------------------------------------------------------
+28-08-2024 13:32:29 : The Error is : System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.getARinvoiceList(Body model) in D:\Rajesh\SAPtoMobile\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 944
+--------------------------------------------------------
+28-08-2024 13:33:20 : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "RowNum", T0."DocEntry", T0."DocNum", T0."DocDate",T0."DocDueDate", T0."CardCode", T0."CardName", T0."NumAtCard", T0."Comments",  T0."DocTotal",T0."VatSum" FROM OINV T0 WHERE T0."CANCELED" ='N' and  T0."DocStatus" ='O' and T0."DocDate" = '20240710' order by T0."DocEntry") 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'jumra-prod-hana' rc=11001: No such host is known.  (jumra-prod-hana:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in D:\Rajesh\SAPtoMobile\BP Portal\Models\SqlConnection\SqlConnection.cs:line 157
+--------------------------------------------------------
+28-08-2024 13:37:34 : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "RowNum", T0."DocEntry", T0."DocNum", T0."DocDate",T0."DocDueDate", T0."CardCode", T0."CardName", T0."NumAtCard", T0."Comments",  T0."DocTotal",T0."VatSum" FROM OINV T0 WHERE T0."CANCELED" ='N' and  T0."DocStatus" ='O' and T0."DocDate" = '20240710' order by T0."DocEntry") 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'jumra-prod-hana' rc=11001: No such host is known.  (jumra-prod-hana:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in D:\Rajesh\SAPtoMobile\BP Portal\Models\SqlConnection\SqlConnection.cs:line 157
+--------------------------------------------------------

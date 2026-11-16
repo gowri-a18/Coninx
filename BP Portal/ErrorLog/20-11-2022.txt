@@ -1,0 +1,8 @@
+11/20/2022 7:55:39 PM : DeliveryOrder Attachment Conversion Error : Object reference not set to an instance of an object.
+--------------------------------------------------------
+11/20/2022 8:00:20 PM : DeliveryOrder Attachment Conversion Error : Object reference not set to an instance of an object.
+--------------------------------------------------------
+11/20/2022 9:11:48 PM : DeliveryOrder Attachment Conversion Error : The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+--------------------------------------------------------
+11/20/2022 9:58:21 PM : DeliveryOrder Attachment Conversion Error : The given path's format is not supported.
+--------------------------------------------------------

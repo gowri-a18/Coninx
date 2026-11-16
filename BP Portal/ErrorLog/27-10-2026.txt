@@ -1,0 +1,5 @@
+10/27/2026 9:35:34 AM : The Error is : System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.getARinvoiceList(Body model) in F:\SAPtoMobile_ASL\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 968
+--------------------------------------------------------

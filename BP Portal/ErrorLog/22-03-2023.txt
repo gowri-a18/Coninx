@@ -1,0 +1,39 @@
+3/22/2023 5:14:14 PM : Query    :   SELECT T0."ItemCode", T0."ItemName", T0."FrgnName", T1."ItmsGrpNam", T0."OnHand", 0 as "PrivCountQty" FROM OITM T0  INNER JOIN OITB T1 ON T0."ItmsGrpCod" = T1."ItmsGrpCod" WHERE UPPER(T0."ItemCode") like '%' || UPPER('0 5 40 150 01') || '%' UNION SELECT T0."U_CastingCode", T1."ItemName", T1."FrgnName", T2."ItmsGrpNam", T1."OnHand" FROM OITM T0  INNER JOIN OITM T1 ON T0."U_CastingCode"= T1."ItemCode" INNER JOIN OITB T2 ON T1."ItmsGrpCod" = T2."ItmsGrpCod" WHERE T0."ItmsGrpCod" =101 and  T1."ItmsGrpCod" ='109' and  UPPER(T0."ItemCode") like '%' || UPPER('[%0]') || '%' ORDER BY "ItmsGrpNam" ,"ItemCode" 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;426 number of columns mismatch: different number of columns in set clause such as UNION, INTERSECT and EXCEPT: line 1 col 1 (at pos 0)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\GK\GK_BPPortal_API\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 163
+--------------------------------------------------------
+3/22/2023 5:18:56 PM : Query    :   SELECT T0."ItemCode", T0."ItemName", T0."FrgnName", T1."ItmsGrpNam", T0."OnHand", 0 as "PrivCountQty" FROM OITM T0  INNER JOIN OITB T1 ON T0."ItmsGrpCod" = T1."ItmsGrpCod" WHERE UPPER(T0."ItemCode") like '%' || UPPER('0 5 40 150 01') || '%' UNION SELECT T0."U_CastingCode", T1."ItemName", T1."FrgnName", T2."ItmsGrpNam", T1."OnHand" FROM OITM T0  INNER JOIN OITM T1 ON T0."U_CastingCode"= T1."ItemCode" INNER JOIN OITB T2 ON T1."ItmsGrpCod" = T2."ItmsGrpCod" WHERE T0."ItmsGrpCod" =101 and  T1."ItmsGrpCod" ='109' and  UPPER(T0."ItemCode") like '%' || UPPER('[%0]') || '%' ORDER BY "ItmsGrpNam" ,"ItemCode" 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;426 number of columns mismatch: different number of columns in set clause such as UNION, INTERSECT and EXCEPT: line 1 col 1 (at pos 0)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\GK\GK_BPPortal_API\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 163
+--------------------------------------------------------
+3/22/2023 6:15:11 PM : Query    :   SELECT T0."ItemCode", T0."ItemName", T0."FrgnName", T1."ItmsGrpNam", T2."OnHand" FROM OITM T0  INNER JOIN OITB T1 ON T0."ItmsGrpCod" = T1."ItmsGrpCod" inner join OITW T2 on T2."ItemCode" = T0."ItemCode"  WHERE T2."WhsCode" = 'WHSFI04' and UPPER(T0."ItemCode") like '%' || UPPER('0 5 40 150 01') || '%' UNION  SELECT T0."U_CastingCode", T1."ItemName", T1."FrgnName", T2."ItmsGrpNam", T4."OnHand" FROM OITM T0  INNER JOIN OITM T1 ON T0."U_CastingCode"= T1."ItemCode" INNER JOIN OITB T2 ON T1."ItmsGrpCod" = T2."ItmsGrpCod"  Inner Join OITW T4 on T4."ItemCode" = T0."ItemCode"  WHERE T2."WhsCode" = 'WHSFI04' and T0."ItmsGrpCod" =101 and  T1."ItmsGrpCod" ='109' and  UPPER(T0."ItemCode") like '%' || UPPER('[%0]') || '%' ORDER BY "ItmsGrpNam" ,"ItemCode" 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;260 invalid column name: T2.WhsCode: line 1 col 582 (at pos 581)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\GK\GK_BPPortal_API\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 163
+--------------------------------------------------------

@@ -1,0 +1,16 @@
+7/4/2023 10:39:16 PM : Error - System found, you trying to submit old invoice
+--------------------------------------------------------
+7/4/2023 10:42:33 PM : Error - System found, you trying to submit old invoice
+--------------------------------------------------------
+7/4/2023 11:20:43 PM : Error: Unable to connect to the remote server
+--------------------------------------------------------
+7/4/2023 11:21:01 PM : Error - System found, you trying to submit old invoice
+--------------------------------------------------------
+7/4/2023 11:25:04 PM : Success - E-Invoice Generated Successfully
+--------------------------------------------------------
+7/4/2023 11:28:30 PM : Success - E-Invoice Generated Successfully
+--------------------------------------------------------
+7/4/2023 11:29:58 PM : Success - E-Invoice Generated Successfully
+--------------------------------------------------------
+7/4/2023 11:40:13 PM : Success - E-Invoice Generated Successfully
+--------------------------------------------------------

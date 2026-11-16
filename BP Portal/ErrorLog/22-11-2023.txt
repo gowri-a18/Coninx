@@ -1,0 +1,18 @@
+11/22/2023 9:39:00 AM : Incoming Payment Posting Success : 100003676
+--------------------------------------------------------
+11/22/2023 9:43:10 AM : Error - System found there is 13 pending invoice not submited for selected device
+--------------------------------------------------------
+11/22/2023 9:47:12 AM : The Error is : System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;339 invalid number: not a valid number string '' (at pos 59) 
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at DemoProject.Models.BusinessLayer.BusinessLogic.Non_Execute_HANA(String NoExQuery) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2885
+--------------------------------------------------------
+11/22/2023 9:47:17 AM : The Error is : System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;339 invalid number: not a valid number string '' (at pos 59) 
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at DemoProject.Models.BusinessLayer.BusinessLogic.Non_Execute_HANA(String NoExQuery) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2885
+--------------------------------------------------------

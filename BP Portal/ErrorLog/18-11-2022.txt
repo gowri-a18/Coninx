@@ -1,0 +1,104 @@
+11/18/2022 6:21:18 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY "DocEntry" ASC) AS "RowNum",T0."DocNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;268 column ambiguously defined: DocEntry: line 1 col 52 (at pos 51)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 162
+--------------------------------------------------------
+11/18/2022 6:24:26 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "RowNum",T0."DocNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [42000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] Syntax error or access violation;257 sql syntax error: incorrect syntax near "T0": line 1 col 454 (at pos 454)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_2(String Query2) in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 126
+--------------------------------------------------------
+11/18/2022 6:29:11 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "RowNum",T0."DocNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [42000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] Syntax error or access violation;257 sql syntax error: incorrect syntax near "T0": line 1 col 451 (at pos 451)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_2(String Query2)
+--------------------------------------------------------
+11/18/2022 6:31:54 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "RowNum",T0."DocNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;268 column ambiguously defined: DocEntry: line 1 col 95 (at pos 94)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_2(String Query2) in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 126
+--------------------------------------------------------
+11/18/2022 6:41:50 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "DocEntry",T0."LineNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;260 invalid column name: T0.LineNum: line 1 col 85 (at pos 84)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 162
+--------------------------------------------------------
+11/18/2022 6:43:08 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "DocEntry",T0."LineNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;260 invalid column name: T0.LineNum: line 1 col 85 (at pos 84)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 162
+--------------------------------------------------------
+11/18/2022 6:43:23 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "DocEntry",T0."LineNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;260 invalid column name: T0.LineNum: line 1 col 85 (at pos 84)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 162
+--------------------------------------------------------
+11/18/2022 6:46:56 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."DocEntry" ASC) AS "DocEntry",T0."DocNum",case when T0."DocStatus" = 'C' then 'Closed' else 'Open' end as DocStatus, T0."DocDate" as "PODate", T0."DocDueDate" as "DueDate", T1."ItemCode" as "ItemCode", T1."Dscription" as "ItemName",T1."Quantity" as "POQty", T1."OpenQty" as "OpenQty",0 "StockInTransit" ,T1."FreeTxt" as "Remarks" FROM  "SBODEMOIN"."OPOR" T0 INNER JOIN "SBODEMOIN"."POR1" T1 ON T0."DocEntry" = T1."DocEntry" WHERE T0."CANCELED" ='N' and T0."DocStatus"='O' and T1."LineStatus" ='O' and "CardCode"='V10000') A where "RowNum" Between '1' and '20'  
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB32 DLL][HDBODBC32] General error;260 invalid column name: RowNum: line 1 col 585 (at pos 584)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in C:\Rajesh\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 162
+--------------------------------------------------------

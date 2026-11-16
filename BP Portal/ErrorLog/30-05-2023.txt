@@ -1,0 +1,8 @@
+5/30/2023 5:32:40 AM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFFFFF): CServiceData::SetPropertyValueString failed; Value too long in property 'CardCode' of 'Document'
+   at SAPbobsCOM.IDocuments.set_CardCode(String pVal)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.SalesQuatation(SalesQuatation model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 1876
+--------------------------------------------------------
+5/30/2023 5:33:35 AM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFFFFF): CServiceData::SetPropertyValueString failed; Value too long in property 'CardCode' of 'Document'
+   at SAPbobsCOM.IDocuments.set_CardCode(String pVal)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.SalesQuatation(SalesQuatation model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 1876
+--------------------------------------------------------

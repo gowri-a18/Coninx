@@ -1,0 +1,10 @@
+1/16/2024 2:31:49 PM : Incoming Payment Method Failed due to : Cannot perform transaction in controlling type account  [JDT1.Account][line: 1] , '161519'  [Message 173-87]
+--------------------------------------------------------
+1/16/2024 2:33:12 PM : Incoming Payment Method Failed due to : Cannot perform transaction in controlling type account  [JDT1.Account][line: 1] , '161519'  [Message 173-87]
+--------------------------------------------------------
+1/16/2024 2:35:13 PM : Incoming Payment Method Failed due to : Cannot perform transaction in controlling type account  [JDT1.Account][line: 1] , '161519'  [Message 173-87]
+--------------------------------------------------------
+1/16/2024 2:41:08 PM : Incoming Payment Method Failed due to : Cannot perform transaction in controlling type account  [JDT1.Account][line: 1] , '161519'  [Message 173-87]
+--------------------------------------------------------
+1/16/2024 2:41:32 PM : Incoming Payment Method Failed due to : Cannot perform transaction in controlling type account  [JDT1.Account][line: 1] , '161519'  [Message 173-87]
+--------------------------------------------------------

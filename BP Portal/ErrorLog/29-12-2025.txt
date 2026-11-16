@@ -1,0 +1,22 @@
+12/29/2025 12:56:42 PM : Query    :    
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [SAP AG][LIBODBCHDB DLL][HDBODBC] Base table or view not found;259 invalid table name:  Could not find table/view OACT in schema GAT_SALESELITE_WTDL: line 1 col 27 (at pos 26)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_GetSingleValue(String sQry) in C:\Users\Administrator\Documents\WadsWorthIntegration\SAPtoMobile_Wadsworth\BP Portal\Models\SqlConnection\SqlConnection.cs:line 311
+--------------------------------------------------------
+12/29/2025 12:57:38 PM : Query    :    
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [SAP AG][LIBODBCHDB DLL][HDBODBC] Base table or view not found;259 invalid table name:  Could not find table/view OACT in schema GAT_SALESELITE_WTDL: line 1 col 27 (at pos 26)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_GetSingleValue(String sQry) in C:\Users\Administrator\Documents\WadsWorthIntegration\SAPtoMobile_Wadsworth\BP Portal\Models\SqlConnection\SqlConnection.cs:line 311
+--------------------------------------------------------

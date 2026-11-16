@@ -1,0 +1,50 @@
+3/25/2024 8:09:01 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFF830): 1). [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;260 invalid column name: T0.U_VenRefNo: line 1 col 8 (at pos 7)
+
+   at SAPbobsCOM.IRecordset.DoQuery(String QueryStr)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2970
+--------------------------------------------------------
+3/25/2024 8:10:41 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFF830): 1). [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;260 invalid column name: T0.t_BLCC: line 1 col 193 (at pos 192)
+
+   at SAPbobsCOM.IRecordset.DoQuery(String QueryStr)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2969
+--------------------------------------------------------
+3/25/2024 8:11:29 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFF830): 1). [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;260 invalid column name: T0.t_BLCC: line 1 col 193 (at pos 192)
+
+   at SAPbobsCOM.IRecordset.DoQuery(String QueryStr)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2969
+--------------------------------------------------------
+3/25/2024 8:12:44 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFFBAE): Invalid field name
+   at SAPbobsCOM.IFields.Item(Object Index)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2976
+--------------------------------------------------------
+3/25/2024 8:14:42 PM : The Error is : Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'System.DateTime' to 'string'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2977
+--------------------------------------------------------
+3/25/2024 8:15:54 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFFBAE): Invalid field name
+   at SAPbobsCOM.IFields.Item(Object Index)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2980
+--------------------------------------------------------
+3/25/2024 8:16:13 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFFBAE): Invalid field name
+   at SAPbobsCOM.IFields.Item(Object Index)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2980
+--------------------------------------------------------
+3/25/2024 8:17:01 PM : The Error is : Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'double' to 'string'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2981
+--------------------------------------------------------
+3/25/2024 8:17:51 PM : The Error is : Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'System.DateTime' to 'string'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2982
+--------------------------------------------------------
+3/25/2024 8:18:10 PM : The Error is : Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'System.DateTime' to 'string'
+   at CallSite.Target(Closure , CallSite , Object )
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2982
+--------------------------------------------------------
+3/25/2024 8:18:52 PM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFFBAE): Invalid field name
+   at SAPbobsCOM.IFields.Item(Object Index)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2987
+--------------------------------------------------------

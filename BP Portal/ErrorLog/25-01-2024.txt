@@ -1,0 +1,20 @@
+1/25/2024 6:25:12 AM : Incoming Payment Method Failed : System.Runtime.InteropServices.COMException (0xFFFFFBA4): (2222) Error - Kindly Select the Warehouse from your Branch!
+   at SAPbobsCOM.ICompany.EndTransaction(BoWfTransOpt endType)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.IncomingPayment_InvoiceWithSerialNumber(String DocEntry, String CustCode, String Date, InvoiceWithSerialNumber model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2792
+--------------------------------------------------------
+1/25/2024 6:26:46 AM : Incoming Payment Method Failed : System.Runtime.InteropServices.COMException (0xFFFFFBA4): (2222) Error - Kindly Select the Warehouse from your Branch!
+   at SAPbobsCOM.ICompany.EndTransaction(BoWfTransOpt endType)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.IncomingPayment_InvoiceWithSerialNumber(String DocEntry, String CustCode, String Date, InvoiceWithSerialNumber model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2792
+--------------------------------------------------------
+1/25/2024 6:52:03 AM : Incoming Payment Method Failed : System.Runtime.InteropServices.COMException (0xFFFFFBA4): (2222) Error - Kindly Select the Warehouse from your Branch!
+   at SAPbobsCOM.ICompany.EndTransaction(BoWfTransOpt endType)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.IncomingPayment_InvoiceWithSerialNumber(String DocEntry, String CustCode, String Date, InvoiceWithSerialNumber model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2799
+--------------------------------------------------------
+1/25/2024 7:54:11 AM : Incoming Payment Method Failed : System.Runtime.InteropServices.COMException (0xFFFFFBA4): (2222) Error - Kindly Select the Warehouse from your Branch!
+   at SAPbobsCOM.ICompany.EndTransaction(BoWfTransOpt endType)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.IncomingPayment_InvoiceWithSerialNumber(String DocEntry, String CustCode, String Date, InvoiceWithSerialNumber model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2799
+--------------------------------------------------------
+1/25/2024 7:55:25 AM : Incoming Payment Posting Success : 130012871
+--------------------------------------------------------
+1/25/2024 7:55:29 AM : Error - The invoice or receipt is late and cannot be received. Try to change the date, about 13 have been issued after 2024-01-20
+--------------------------------------------------------

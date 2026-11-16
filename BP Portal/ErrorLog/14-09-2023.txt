@@ -1,0 +1,18 @@
+9/14/2023 9:42:46 AM : Incoming Payment Method Failed due to : Credit card code does not exist  [RCT3.CreditCard][line: 1]
+--------------------------------------------------------
+9/14/2023 9:45:30 AM : Incoming Payment Method Failed due to : To generate this document, first define the numbering series in the Administration module
+--------------------------------------------------------
+9/14/2023 9:49:28 PM : Incoming Payment Posting Success : 
+--------------------------------------------------------
+9/14/2023 10:23:03 PM : Incoming Payment Method Failed due to : Payment method not defined  [RCT3.CrTypeCode][line: 1]
+--------------------------------------------------------
+9/14/2023 10:52:08 PM : Incoming Payment Posting Success : 100003652
+--------------------------------------------------------
+9/14/2023 10:54:57 PM : Incoming Payment Posting Success : 100003653
+--------------------------------------------------------
+9/14/2023 10:54:58 PM : Error: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+--------------------------------------------------------
+9/14/2023 10:57:47 PM : Incoming Payment Posting Success : 100003654
+--------------------------------------------------------
+9/14/2023 10:58:15 PM : Error: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+--------------------------------------------------------

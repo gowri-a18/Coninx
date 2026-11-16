@@ -1,0 +1,39 @@
+3/26/2024 7:49:15 AM : The Error is : Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'int' to 'string'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2988
+--------------------------------------------------------
+3/26/2024 7:49:52 AM : The Error is : Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'int' to 'string'
+   at CallSite.Target(Closure , CallSite , Object )
+   at DemoProject.Models.BusinessLayer.BusinessLogic.GetContainerTrackingDetails(ContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 2988
+--------------------------------------------------------
+3/26/2024 8:19:54 AM : The Error is : System.Runtime.InteropServices.COMException (0xFFFFF814): No matching records found (ODBC -2028)
+   at SAPbobsCOM.IGeneralService.GetByParams(GeneralDataParams pIGeneralDataParams)
+   at DemoProject.Models.BusinessLayer.BusinessLogic.PutContainerTrackingDetails(PutContainerTrackingDetails model) in C:\Users\GRSupport3\Desktop\MobileToSAP\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 3052
+--------------------------------------------------------
+3/26/2024 9:12:17 AM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 9:21:14 AM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 9:26:52 AM : Updated Successfully, DocNum: 311
+--------------------------------------------------------
+3/26/2024 9:34:45 AM : Updated Successfully, DocNum: 311
+--------------------------------------------------------
+3/26/2024 10:08:33 AM : Updated Successfully, DocNum: 311
+--------------------------------------------------------
+3/26/2024 10:46:26 AM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 10:49:53 AM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 10:54:53 AM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 12:39:17 PM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 12:46:13 PM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 12:49:28 PM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 12:52:22 PM : Updated Successfully, DocNum: 303
+--------------------------------------------------------
+3/26/2024 1:19:06 PM : Updated Successfully, DocNum: 303
+--------------------------------------------------------

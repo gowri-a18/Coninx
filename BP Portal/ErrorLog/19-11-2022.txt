@@ -1,0 +1,7 @@
+11/19/2022 11:30:29 AM : The Error is : System.NullReferenceException: Object reference not set to an instance of an object.
+   at DemoProject.Models.BusinessLayer.BusinessLogic.getDraftGRPOPosting(DraftGRPOPosting model) in C:\Rajesh\BP Portal\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 183
+--------------------------------------------------------
+11/19/2022 4:50:13 PM : DeliveryOrder Attachment Conversion Error : Could not find a part of the path 'C:\Log\1_V10000_202211191613.jpg'.
+--------------------------------------------------------
+11/19/2022 4:54:26 PM : DeliveryOrder Attachment Conversion Error : Could not find a part of the path 'C:\Log\1_V10000_202211191645.jpg'.
+--------------------------------------------------------

@@ -1,0 +1,24 @@
+27-08-2024 12:46:27 : Query    :    
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'jumra-prod-hana' rc=11001: No such host is known.  (jumra-prod-hana:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_GetSingleValue(String sQry) in D:\Rajesh\SAPtoMobile\BP Portal\Models\SqlConnection\SqlConnection.cs:line 231
+--------------------------------------------------------
+27-08-2024 12:46:50 : Query    :    
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'jumra-prod-hana' rc=11001: No such host is known.  (jumra-prod-hana:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA_GetSingleValue(String sQry) in D:\Rajesh\SAPtoMobile\BP Portal\Models\SqlConnection\SqlConnection.cs:line 231
+--------------------------------------------------------

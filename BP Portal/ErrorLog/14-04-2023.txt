@@ -1,0 +1,5 @@
+4/14/2023 7:47:41 AM : The Error is : System.Net.WebException: The remote server returned an error: (403) Forbidden.
+   at System.Net.HttpWebRequest.GetResponse()
+   at DemoProject.Models.BusinessLayer.BusinessLogic.jsontest()
+   at DemoProject.Models.BusinessLayer.BusinessLogic.itemsynclist(ItemSyncListDate model)
+--------------------------------------------------------

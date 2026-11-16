@@ -1,0 +1,28 @@
+4/24/2023 4:46:58 AM : Query    :   SELECT top 200 T0."DocEntry",T0."DocNum", T0."DocDate", T0."CardCode" as "Transfer_To_Branch_Code", T0."CardName" as  "Transfer_To_Branch_Name", T1."ItemCode", T1."Dscription",  T1."unitMsr",T1."InvQty",T1."FromWhsCod" as "From_Warehouse", T1."StockPrice" as "Cost", T1."LineTotal" as "Cost Total",T0."U_IsPOSSend", T0."U_ISSYNC", T2."U_Sub_Category", T2."U_SubCategory2", T2."U_Brand", T2."U_Size", T2."U_Color", T2."U_Classification", T2."frozenFor",T2."CodeBars",'NA' as "U_Gender",T5."Price" as "Selling Price" FROM OWTR T0 INNER JOIN WTR1 T1 ON T0."DocEntry" = T1."DocEntry" INNER JOIN OITM T2 ON T1."ItemCode" = T2."ItemCode" INNER JOIN OCRD T3 ON T0."CardCode" = T3."CardCode" INNER JOIN ITM1 T5 ON T3."ListNum" = T5."PriceList" and T5."ItemCode" = T1."ItemCode" WHERE T0."DocDate" >= '20220101' and  T0."CardCode" IS NOT NULL and T0."U_ISSYNC" = 'Y' and  T1."WhsCode" Like '%%GIT%%' and T2."CodeBars" IS NOT NULL and T0."U_IsPOSSend" = 'Y' and T0."DocEntry" >= '37404' and "Transfer_To_Branch_Code" = 'D3004' order by T0."DocEntry" 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;260 invalid column name: Transfer_To_Branch_Code: line 1 col 982 (at pos 981)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in D:\ARGIT\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 163
+--------------------------------------------------------
+4/24/2023 4:46:58 AM : The Error is : System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in D:\ARGIT\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 175
+   at DemoProject.Models.SqlConnections.SqlConnectionData.responseData(String Type, String Query2) in D:\ARGIT\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 798
+   at DemoProject.Models.BusinessLayer.BusinessLogic.itemsynclist(ItemSyncListDate model) in D:\ARGIT\BP Portal\BP Portal\Models\BusinessLayer\BusinessLogic.cs:line 1509
+--------------------------------------------------------
+4/24/2023 4:46:58 AM : Query    :   SELECT top 200 T0."DocEntry",T0."DocNum", T0."DocDate", T0."CardCode" as "Transfer_To_Branch_Code", T0."CardName" as  "Transfer_To_Branch_Name", T1."ItemCode", T1."Dscription",  T1."unitMsr",T1."InvQty",T1."FromWhsCod" as "From_Warehouse", T1."StockPrice" as "Cost", T1."LineTotal" as "Cost Total",T0."U_IsPOSSend", T0."U_ISSYNC", T2."U_Sub_Category", T2."U_SubCategory2", T2."U_Brand", T2."U_Size", T2."U_Color", T2."U_Classification", T2."frozenFor",T2."CodeBars",'NA' as "U_Gender",T5."Price" as "Selling Price" FROM OWTR T0 INNER JOIN WTR1 T1 ON T0."DocEntry" = T1."DocEntry" INNER JOIN OITM T2 ON T1."ItemCode" = T2."ItemCode" INNER JOIN OCRD T3 ON T0."CardCode" = T3."CardCode" INNER JOIN ITM1 T5 ON T3."ListNum" = T5."PriceList" and T5."ItemCode" = T1."ItemCode" WHERE T0."DocDate" >= '20220101' and  T0."CardCode" IS NOT NULL and T0."U_ISSYNC" = 'Y' and  T1."WhsCode" Like '%%GIT%%' and T2."CodeBars" IS NOT NULL and T0."U_IsPOSSend" = 'Y' and T0."DocEntry" >= '37404' and "Transfer_To_Branch_Code" = 'D3004' order by T0."DocEntry" 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;260 invalid column name: Transfer_To_Branch_Code: line 1 col 982 (at pos 981)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA() in D:\ARGIT\BP Portal\BP Portal\Models\SqlConnection\SqlConnection.cs:line 163
+--------------------------------------------------------
