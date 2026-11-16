@@ -151,16 +151,16 @@ namespace DemoProject.Models.DomainClasses
         public DateTime DocDate { get; set; }
         public double ExchangeRate { get; set; }
         public double Amount { get; set; }
-        //public double TransferSum { get; set; }
+       
         public string CardCode { get; set; }
         public string DocCurrency { get; set; }
-       public string Site { get; set; } 
+       //public string Site { get; set; } 
         public string TransferAccount { get; set; }
         public string BPLID { get; set; }
         public string CertificateNumber { get; set; }
-        //public double PaymentAmount { get; set; }
+       
         public string WithholderName { get; set; }
-        //public int InvoiceDocEntry { get; set; }
+       
         public List<IncomingPaymentPostingDetails> InvoiceItemDetails { get; set; }
 
     }
@@ -177,11 +177,11 @@ namespace DemoProject.Models.DomainClasses
     {
         public DateTime DocDate { get; set; }
         public string CardCode { get; set; }
-        public string ProjectCode { get; set; }
+       // public string ProjectCode { get; set; }
         public double TransferSum { get; set; }
         public string CounterReference { get; set; }
         public string Remarks { get; set; }
-        //public string CashAccount { get; set; }
+      
         public string TransferAccount { get; set; }
         public string DocType { get; set; }
         public string DocCurrency { get; set; }
@@ -203,11 +203,11 @@ namespace DemoProject.Models.DomainClasses
     {
         public DateTime DocDate { get; set; }
         public string CardCode { get; set; }
-        public string ProjectCode { get; set; }
+        //public string ProjectCode { get; set; }
         public double TransferSum { get; set; }
         public string CounterReference { get; set; }
         public string Remarks { get; set; }
-        //public string CashAccount { get; set; }
+       
         public string TransferAccount { get; set; }
         public string DocType { get; set; }
         public string DocCurrency { get; set; }
@@ -222,16 +222,16 @@ namespace DemoProject.Models.DomainClasses
         public DateTime DocDate { get; set; }
         public double ExchangeRate { get; set; }
         public double Amount { get; set; }
-        //public double TransferSum { get; set; }
+      
         public string CardCode { get; set; }
         public string DocCurrency { get; set; }
-        public string Site { get; set; }
+        //public string Site { get; set; }
         public string TransferAccount { get; set; }
         public string BPLID { get; set; }
         public string CertificateNumber { get; set; }
-        //public double PaymentAmount { get; set; }
+      
         public string WithholderName { get; set; }
-        //public int InvoiceDocEntry { get; set; }
+       
         
 
     }
@@ -313,13 +313,13 @@ namespace DemoProject.Models.DomainClasses
         public string CardCode { get; set; }
         public string CardName { get; set; }
         public string LicTradNum { get; set; }
-        public string CuInvoiceNo { get; set; }
+       // public string CuInvoiceNo { get; set; }
         public string KRACUNumber { get; set; }
         public string DocCur { get; set; }
         public double DocTotal { get; set; }
         public double BalanceDue { get; set; }
         public double TotalBeforeDiscount { get; set; }
-        public string BranchId { get; set; }
+       // public string BranchId { get; set; }
         public int TotalIndex { get; set; }
         //public List<Products> ItemList { get; set; }
 

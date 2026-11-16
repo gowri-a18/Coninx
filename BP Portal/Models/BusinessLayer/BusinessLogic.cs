@@ -954,11 +954,11 @@ namespace DemoProject.Models.BusinessLayer
                 this._responseModel = new ResponseModel();
                 //this._stringBuilder.Append("SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0.\"DocEntry\" ASC) AS \"RowNum\", T0.\"DocEntry\", T0.\"DocNum\", T0.\"DocDate\",T0.\"DocDueDate\", T0.\"CardCode\", T0.\"CardName\", T0.\"DocTotal\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' order by T0.\"DocEntry\")");
                // this._stringBuilder.Append("SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0.\"DocEntry\" ASC) AS \"RowNum\", T0.\"DocEntry\", T0.\"DocNum\", T0.\"DocCur\", T0.\"CardCode\", T0.\"CardName\", T0.\"LicTradNum\", T0.\"U_U_KRA_CU_No\",T0.\"PaidToDate\", T0.\"DocTotal\",(\"DocTotal\" - \"PaidToDate\") AS \"BalanceDue\",(T0.\"DocTotal\"+ T0.\"DiscSum\" - T0.\"VatSum\"- T0.\"TotalExpns\"+ T0.\"WTSum\") AS \"TotalBeforeDiscount\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' order by T0.\"DocEntry\")");
-                this._stringBuilder.Append("SELECT  T0.\"DocEntry\",T0.\"DocDate\", T0.\"DocNum\", T0.\"DocCur\", T0.\"CardCode\", T0.\"CardName\", T0.\"LicTradNum\", T0.\"U_CUInvNo\",T0.\"U_U_KRA_CU_No\",T0.\"PaidToDate\", T0.\"DocTotal\",(\"DocTotal\" - \"PaidToDate\") AS \"BalanceDue\",(T0.\"DocTotal\"+ T0.\"DiscSum\" - T0.\"VatSum\"- T0.\"TotalExpns\"+ T0.\"WTSum\") AS \"TotalBeforeDiscount\",T0.\"U_BrchId\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' AND T0.\"DocDate\" BETWEEN '" + model.FromDate + "' AND '" + model.ToDate + "'  order by T0.\"DocEntry\"");
+                this._stringBuilder.Append("SELECT  T0.\"DocEntry\",T0.\"DocDate\", T0.\"DocNum\", T0.\"DocCur\", T0.\"CardCode\", T0.\"CardName\", T0.\"LicTradNum\",T0.\"U_SERIAL\",T0.\"PaidToDate\", T0.\"DocTotal\",(\"DocTotal\" - \"PaidToDate\") AS \"BalanceDue\",(T0.\"DocTotal\"+ T0.\"DiscSum\" - T0.\"VatSum\"- T0.\"TotalExpns\"+ T0.\"WTSum\") AS \"TotalBeforeDiscount\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' AND T0.\"DocDate\" BETWEEN '" + model.FromDate + "' AND '" + model.ToDate + "'  order by T0.\"DocEntry\"");
                 this.sqlDataAccessLayer = new SqlConnectionData();
                 this.sqlDataAccessLayer.Query = this._stringBuilder.ToString();
                 this.Query = this._stringBuilder.ToString();
-                this.Query2 = "SELECT  T0.\"DocEntry\",T0.\"DocDate\", T0.\"DocNum\", T0.\"DocCur\", T0.\"CardCode\", T0.\"CardName\", T0.\"LicTradNum\", T0.\"U_CUInvNo\", T0.\"U_U_KRA_CU_No\",T0.\"PaidToDate\", T0.\"DocTotal\",(\"DocTotal\" - \"PaidToDate\") AS \"BalanceDue\",(T0.\"DocTotal\"+ T0.\"DiscSum\" - T0.\"VatSum\"- T0.\"TotalExpns\"+ T0.\"WTSum\") AS \"TotalBeforeDiscount\",T0.\"U_BrchId\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' AND T0.\"DocDate\" BETWEEN '" + model.FromDate + "' AND '" + model.ToDate + "' order by T0.\"DocEntry\"";
+                this.Query2 = "SELECT  T0.\"DocEntry\",T0.\"DocDate\", T0.\"DocNum\", T0.\"DocCur\", T0.\"CardCode\", T0.\"CardName\", T0.\"LicTradNum\",T0.\"U_SERIAL\",T0.\"PaidToDate\", T0.\"DocTotal\",(\"DocTotal\" - \"PaidToDate\") AS \"BalanceDue\",(T0.\"DocTotal\"+ T0.\"DiscSum\" - T0.\"VatSum\"- T0.\"TotalExpns\"+ T0.\"WTSum\") AS \"TotalBeforeDiscount\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' AND T0.\"DocDate\" BETWEEN '" + model.FromDate + "' AND '" + model.ToDate + "' order by T0.\"DocEntry\"";
                // this.Query2 = "SELECT CEIL(CAST(COUNT(*) as Decimal(18,2))/100.0) CNT FROM(SELECT ROW_NUMBER() OVER (ORDER BY T0.\"DocEntry\" ASC) AS \"RowNum\",  T0.\"DocEntry\", T0.\"DocNum\", T0.\"DocCur\", T0.\"CardCode\", T0.\"CardName\", T0.\"LicTradNum\", T0.\"U_U_KRA_CU_No\",T0.\"PaidToDate\", T0.\"DocTotal\",(\"DocTotal\" - \"PaidToDate\") AS \"BalanceDue\",(T0.\"DocTotal\"+ T0.\"DiscSum\" - T0.\"VatSum\"- T0.\"TotalExpns\"+ T0.\"WTSum\") AS \"TotalBeforeDiscount\" FROM OINV T0 WHERE T0.\"CANCELED\" ='N' and  T0.\"DocStatus\" ='O' order by T0.\"DocEntry\") A";
 
         //        Dictionary<string, string> databases = new Dictionary<string, string>
@@ -1811,7 +1811,7 @@ namespace DemoProject.Models.BusinessLayer
                 {
                     DocDate = model.DocDate,
                     CardCode = model.CardCode.Trim(),
-                    ProjectCode = model.Site,
+                    //ProjectCode = model.Site,
                     DocCurrency = DocCurrency,
                     CounterReference = "WHT-C",
                     Remarks = model.WithholderName,
@@ -1909,7 +1909,7 @@ namespace DemoProject.Models.BusinessLayer
                     DocDate = model.DocDate,
                     DocType = SAPbobsCOM.BoRcptTypes.rCustomer.ToString(),
                     CardCode = model.CardCode.Trim(),
-                    ProjectCode = model.Site,
+                    //ProjectCode = model.Site,
                     DocCurrency = DocCurrency,
                     CounterReference = "WHT-C",
                     Remarks = model.WithholderName,

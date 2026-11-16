@@ -391,7 +391,7 @@ namespace DemoProject.Models.SqlConnections
                         header.CardName = row["CardName"].ToString();
                         header.DocCur = row["DocCur"].ToString();
                         header.LicTradNum = row["LicTradNum"].ToString();
-                        header.CuInvoiceNo = row["U_CuInvoiceNo"].ToString();
+                        //header.CuInvoiceNo = row["U_CuInvoiceNo"].ToString();
                         header.DocTotal = Convert.ToDouble(row["DocTotal"]);
                         header.BalanceDue = Convert.ToDouble(row["BalanceDue"]); 
                         header.TotalBeforeDiscount = Convert.ToDouble(row["TotalBeforeDiscount"]);
@@ -547,12 +547,12 @@ namespace DemoProject.Models.SqlConnections
                         header.CardName = DR["CardName"].ToString();
                         header.DocCur = DR["DocCur"].ToString();
                         header.LicTradNum = DR["LicTradNum"].ToString();
-                        header.CuInvoiceNo = DR["U_CUInvNo"].ToString();
-                        header.KRACUNumber = DR["U_U_KRA_CU_No"].ToString();
+                       // header.CuInvoiceNo = DR["U_CUInvNo"].ToString();
+                        header.KRACUNumber = DR["U_SERIAL"].ToString();
                         header.DocTotal = Convert.ToDouble(DR["DocTotal"]);
                         header.BalanceDue = Convert.ToDouble(DR["BalanceDue"]);
                         header.TotalBeforeDiscount = Convert.ToDouble(DR["TotalBeforeDiscount"]);
-                        header.BranchId = DR["U_BrchId"].ToString();
+                        //header.BranchId = DR["U_BrchId"].ToString();
                         Main.Add(header);
                         
                         //List<Products> Item = new List<Products>();

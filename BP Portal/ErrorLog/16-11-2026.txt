@@ -1,0 +1,47 @@
+11/16/2026 1:32:53 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."BankCode" ASC) AS "RowNum", T0."CardCode", T0."CardName", T0."LicTradNum" FROM OCRD T0 WHERE  T0."CardType" = 'C') A 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'hana-b1' rc=11001: No such host is known.  (hana-b1:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in C:\Addon SourceCode\SAPtoMobile_Finsbury\BP Portal\Models\SqlConnection\SqlConnection.cs:line 231
+--------------------------------------------------------
+11/16/2026 1:37:21 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."BankCode" ASC) AS "RowNum", T0."CardCode", T0."CardName", T0."LicTradNum" FROM OCRD T0 WHERE  T0."CardType" = 'C') A 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'hana-b1' rc=11001: No such host is known.  (hana-b1:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in E:\Goandroy\BP Portal\Models\SqlConnection\SqlConnection.cs:line 231
+--------------------------------------------------------
+11/16/2026 1:38:37 PM : Query    :   SELECT * FROM (SELECT ROW_NUMBER() OVER ( ORDER BY T0."BankCode" ASC) AS "RowNum", T0."CardCode", T0."CardName", T0."LicTradNum" FROM OCRD T0 WHERE  T0."CardType" = 'C') A 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [08S01] [SAP AG][LIBODBCHDB DLL][HDBODBC] Communication link failure;-10709 Connection failed (RTE:[89001] Cannot resolve host name 'hana-b1' rc=11001: No such host is known.  (hana-b1:30015))
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   at System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.Odbc.OdbcConnection.Open()
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in E:\Goandroy\BP Portal\Models\SqlConnection\SqlConnection.cs:line 231
+--------------------------------------------------------
+11/16/2026 1:41:27 PM : Query    :   SELECT  T0."DocEntry",T0."DocDate", T0."DocNum", T0."DocCur", T0."CardCode", T0."CardName", T0."LicTradNum", T0."U_CUInvNo",T0."U_U_KRA_CU_No",T0."PaidToDate", T0."DocTotal",("DocTotal" - "PaidToDate") AS "BalanceDue",(T0."DocTotal"+ T0."DiscSum" - T0."VatSum"- T0."TotalExpns"+ T0."WTSum") AS "TotalBeforeDiscount",T0."U_BrchId" FROM OINV T0 WHERE T0."CANCELED" ='N' and  T0."DocStatus" ='O' AND T0."DocDate" BETWEEN '2026-01-11' AND '2026-01-31'  order by T0."DocEntry" 
+ System.Data.Odbc.OdbcException (0x80131937): ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;260 invalid column name: T0.U_CUInvNo: line 1 col 110 (at pos 109)
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DemoProject.Models.SqlConnections.SqlConnectionData.GetDataTable_HANA(String Query) in E:\Goandroy\BP Portal\Models\SqlConnection\SqlConnection.cs:line 237
+--------------------------------------------------------
